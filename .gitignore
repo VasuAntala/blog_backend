@@ -1,0 +1,11 @@
+
+node_modules
+build
+*.build
+*.build/
+*./build
+*.zip
+*.csv
+/upload
+
+.env
