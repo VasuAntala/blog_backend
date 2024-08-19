@@ -1,5 +1,7 @@
 import app from "./index";
 
-app.listen(3001,() => {
-    console.log("Listening on port 3000");
+let port = process.env.PORT || 3001
+
+app.listen(port,() => {
+    console.log(`Listening on port ${port}`);
 });
