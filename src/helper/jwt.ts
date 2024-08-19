@@ -20,10 +20,10 @@ try {
     let isVerifyToken = jwt.verify(bearerToken , 'secret') as any
    
         console.log(isVerifyToken)
-    let ooo= isVerifyToken.user
+    let userID= isVerifyToken.user
   
     // console.log(ooo)
-   let result = await  Model.user.findOne({ _id: ooo._id, isActive: true })
+   let result = await  Model.user.findOne({ _id: userID._id, isActive: true })
 
    console.log('result', {result});
 
@@ -32,9 +32,9 @@ try {
 
         req.body.user = 
         { result:{
-            id: ooo._id,
-            name: ooo.name,
-            email: ooo.email
+            id: userID._id,
+            name: userID.name,
+            email: userID.email
         }};
         next()
      }
