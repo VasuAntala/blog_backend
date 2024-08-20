@@ -4,10 +4,12 @@ import jwt from "jsonwebtoken"
 import { user } from "../../database/model"
 
 
+
 // const router = Router();
 
 export const blog = async (req: Request, res: Response) => {
-    let body = req.body
+    const createdBy = req.body.user._id
+    let body = {...req.body ,createdBy}
 
 
 
@@ -15,11 +17,12 @@ export const blog = async (req: Request, res: Response) => {
 
    
     
-    let Data = blog.save()
- return   res.send({message:"blog created successfully",data:body})
+    await blog.save()
+ return   res.send({message:"blog created successfully",data:blog})
     
     
 }
+
 
     //  jwt.verify(req.body.token, "secret") 
     //     if(user) {

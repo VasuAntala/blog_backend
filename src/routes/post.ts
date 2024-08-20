@@ -5,7 +5,8 @@ import { verifytoken } from "../helper/jwt";
 
 const blogRouter = Router();
 
-blogRouter.post ("/create", verifytoken , blogController.blog);
+blogRouter.post ("/create", blogController.blog);
+
 
 
 export default blogRouter
