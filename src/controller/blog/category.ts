@@ -13,3 +13,16 @@ export const categoryInfo = async (req: Request, res: Response) => {
  return res.send({message:"category created successfully",data:categoryGet})
     
 }
+
+export const seecategory = async (req: Request, res: Response) => {
+
+    let categoryGet = await Model.category.find(
+        {
+            _id:'66c45b881e842a8382992f6b'
+       }
+    )
+
+    
+    return res.send({message:"category get successfully",data:categoryGet})
+    
+}

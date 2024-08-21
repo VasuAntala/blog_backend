@@ -16,6 +16,11 @@ const blogs = new Schema({
         required: [true, 'image is required'],
     },
 
+    category: {
+        type: String,
+        required: [true, 'category is required'],
+    },
+
     createdBy: {
         type: String,
         

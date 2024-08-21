@@ -12,7 +12,8 @@ const router = Router();
 
 router.use("/auth", authRouter);
 router.use("/post",verifytoken,blogRouter);
-router.use("/get",verifytoken,readRouter);
+router.use("/get",readRouter);
 router.use("/category",categoryRouter);
+router.use('/categoryget',categoryRouter)
 
 export default router

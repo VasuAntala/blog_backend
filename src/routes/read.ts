@@ -3,6 +3,6 @@ import { readController } from "../controller";
 
 const readRouter = Router();
 
-readRouter.get("/read/:id", readController.Data);
+readRouter.get("/read", readController.Data);
 
 export default readRouter
