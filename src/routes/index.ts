@@ -3,6 +3,8 @@ import  authRouter from "./auth";
 import blogRouter from "./post";
 import readRouter  from "./read";
 import categoryRouter from "./category"
+import updateRouter from "./update"
+import deleteRouter from "./delete";
 import { verifytoken } from "../helper/jwt";
 
 
@@ -15,5 +17,7 @@ router.use("/post",verifytoken,blogRouter);
 router.use("/get",readRouter);
 router.use("/category",categoryRouter);
 router.use('/categoryget',categoryRouter)
+router.use('/update',updateRouter)
+router.use('/delete',deleteRouter)
 
 export default router

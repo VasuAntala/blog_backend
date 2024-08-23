@@ -3,22 +3,22 @@ import mongoose, { Schema } from "mongoose";
 const blogs = new Schema({
     title: {
         type: String,
-        required: [true, 'title is required'],
+        // required: [true, 'title is required'],
     },
 
     description: {
         type: String,
-        required: [true, 'description is required'],
+        // required: [true, 'description is required'],
     },
 
     image: {
         type: String,
-        required: [true, 'image is required'],
+        // required: [true, 'image is required'],
     },
 
     category: {
         type: String,
-        required: [true, 'category is required'],
+        // required: [true, 'category is required'],
     },
 
     createdBy: {

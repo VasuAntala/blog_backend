@@ -1,3 +1,5 @@
 export *  from "./blog"
 export *  from "./read"
 export *  from "./category"
+export *  from "./update"
+export *  from "./delete"
