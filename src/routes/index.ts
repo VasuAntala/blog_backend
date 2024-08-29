@@ -5,6 +5,7 @@ import readRouter  from "./read";
 import categoryRouter from "./category"
 import updateRouter from "./update"
 import deleteRouter from "./delete";
+import imageRouter from "./image";
 import { verifytoken } from "../helper/jwt";
 
 
@@ -19,5 +20,6 @@ router.use("/category",categoryRouter);
 router.use('/categoryget',categoryRouter)
 router.use('/update',updateRouter)
 router.use('/delete',deleteRouter)
+router.use('/image',imageRouter)
 
 export default router

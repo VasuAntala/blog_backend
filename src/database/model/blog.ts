@@ -3,12 +3,12 @@ import mongoose, { Schema } from "mongoose";
 const blogs = new Schema({
     title: {
         type: String,
-        // required: [true, 'title is required'],
+        required: [true, 'title is required'],
     },
 
     description: {
         type: String,
-        // required: [true, 'description is required'],
+        required: [true, 'description is required'],
     },
 
     image: {
@@ -18,13 +18,13 @@ const blogs = new Schema({
 
     category: {
         type: String,
-        // required: [true, 'category is required'],
+        required: [true, 'category is required'],
     },
 
     createdBy: {
         type: String,
         
-        // required: [true, 'createdBy is required']  
+        required: [true, 'createdBy is required']  
     },
 
     createdAt: {
