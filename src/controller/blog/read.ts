@@ -10,13 +10,13 @@ export const Data = async (req: Request, res: Response) => {
         category: new ObjectId("66c45b881e842a8382992f6b")  //music category
     }).sort({ createdAt: 1 });
 
-    console.log(Data)
+  
     return res.send({message:"data get successfully",data:Data})
 
    
     // rest of your code
 }
-
+      
 export const userData = async (req:Request , res:Response) => {
 
     let user = req.body;    
